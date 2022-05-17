@@ -109,13 +109,4 @@ describe Product do
       produce: [@product4]
     })
   end
-
-  it 'can find the product with the highest price' do
-    @cart.add_product(@product1)
-    @cart.add_product(@product2)
-    @cart.add_product(@product3)
-    @cart.add_product(@product4)
-
-    expect(@cart.max_price).to eq @product1
-  end
 end

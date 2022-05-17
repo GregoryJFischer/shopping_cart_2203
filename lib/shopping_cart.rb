@@ -40,8 +40,4 @@ class ShoppingCart
   def product_breakdown
     @products.group_by {|product| product.category }
   end
-
-  def max_price
-    @products.max_by {|product| product.total_price}
-  end
 end
