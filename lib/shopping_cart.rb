@@ -2,7 +2,8 @@ class ShoppingCart
   attr_reader :name, :capacity, :products
   def initialize(name, capacity)
     @name = name
-    @capacity = capacity.to_i
+    @capacity = capacity.gsub(/\D/, '').to_i
+    # could also just do capacity.to_i, but I left this here as a Regex example
     @products = []
   end
 
